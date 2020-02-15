@@ -1,0 +1,12 @@
+commit e7f5cfe0fabe1e6e6f871a88b2441e006195f2e5 (HEAD -> master)
+Author: Turuto Aleksei <bissmmhunter@gmail.com>
+Date:   Sat Feb 15 18:31:24 2020 +0300
+
+    add status.txt
+
+commit 83abae80bcea9774b99dd96616f7635088cd0a53
+Author: Turuto Aleksei <bissmmhunter@gmail.com>
+Date:   Sat Feb 15 18:26:53 2020 +0300
+
+    add .gitignore
+
