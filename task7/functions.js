@@ -27,9 +27,13 @@ class PostCollection{
 		}
 	}
 	addAll(newPosts){
+		let arr=[];
 		for(let i=0;i<newPosts.length;i++){
-			this.add(newPosts[i]);
+			if(this.add(newPosts[i])===false){
+				arr.push(newPosts[i]);
+			}
 		}
+		return arr;
 		
 	}
 	edit(id,post){
@@ -215,5 +219,9 @@ let posts = new PostCollection(arr);
 	console.log(posts.getPage(0,20,d));
 	console.log("method addAll work:");
 	console.log(massadd);
-	posts.addAll(massadd);
+	console.log(posts.addAll(massadd));
+	console.log(posts.getP());
+	massadd[0].createAt=new Date();
+	console.log(massadd);
+	console.log(posts.addAll(massadd));
 	console.log(posts.getP());
