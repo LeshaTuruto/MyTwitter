@@ -1,14 +1,14 @@
-var arr = [];
+let arr = [];
 for (let i = 1; i <= 20; i++){
-	var arrHash=[];
-	var arrlikes=[];
-	var tag="#hash1";
-	var like="chel1";
+	let arrHash=[];
+	let arrlikes=[];
+	let tag="#hash1";
+	let like="chel1";
 	for(k=1;k<=i;k++){
 		arrHash.push(tag.slice(0,tag.length-1)+k);
 		arrlikes.push(like.slice(0,like.length-1)+k);
 	}
-	var post = {
+	let post = {
 	id: '0',
 	description: 'text text text text text text text text text text text text text text text text text text text text0',
 	author: 'Ivanov Ivan0',
@@ -16,7 +16,7 @@ for (let i = 1; i <= 20; i++){
 	hashTags: arrHash,
 	Likes:arrlikes
 };
-var date=new Date();
+let date=new Date();
 post.createAt=date;
 post.createAt.setSeconds(i);
 post.id=i.toString();
