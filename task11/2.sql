@@ -1,0 +1,1 @@
+SELECT * FROM myschema.post WHERE user_id=1;
