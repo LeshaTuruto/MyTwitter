@@ -1,0 +1,1 @@
+select count(*)from myschema.post where created_at like '%03-01%';
