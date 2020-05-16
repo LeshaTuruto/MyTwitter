@@ -210,14 +210,14 @@ document.getElementById('filtration_remove_last_tag').addEventListener('click',C
 document.getElementById('add_tag_filtration').addEventListener('click',Controller.addHashtagFiltration);
 document.getElementById('filtration').addEventListener('submit',Controller.filtration)
 let filterConfig=JSON.parse(localStorage.getItem('filterConfig'));
-if(filterConfig!=="") {
+if(filterConfig!==null) {
     if(filterConfig.createAt!==undefined) {
         filterConfig.createAt = new Date(filterConfig.createAt);
     }
 }
 let array=JSON.parse(localStorage.getItem('posts'));
 if(array===null){
-	localStorage.setItem('posts',JSON.stringify([]);
+	localStorage.setItem('posts',JSON.stringify([]));
 	array=[];
 }
 array.forEach((post)=>{
@@ -227,7 +227,7 @@ let posts=new PostCollection(array);
 let view=new View();
 let ctrl=new Controller(view,posts);
 let edition={};
-if(localStorage.getItem('username')!=='') {
+if(localStorage.getItem('username')!==null&&localStorage.getItem('username')!=="") {
     ctrl._userLogin = localStorage.getItem('username');
 }
 view.showHeader(ctrl);
