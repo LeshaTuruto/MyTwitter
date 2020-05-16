@@ -210,7 +210,7 @@ document.getElementById('filtration_remove_last_tag').addEventListener('click',C
 document.getElementById('add_tag_filtration').addEventListener('click',Controller.addHashtagFiltration);
 document.getElementById('filtration').addEventListener('submit',Controller.filtration)
 let filterConfig=JSON.parse(localStorage.getItem('filterConfig'));
-if(filterConfig!==null) {
+if(filterConfig!==null&&filterConfig!=="") {
     if(filterConfig.createAt!==undefined) {
         filterConfig.createAt = new Date(filterConfig.createAt);
     }
