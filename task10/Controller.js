@@ -216,6 +216,10 @@ if(filterConfig!=="") {
     }
 }
 let array=JSON.parse(localStorage.getItem('posts'));
+if(array===null){
+	localStorage.setItem('posts',JSON.stringify([]);
+	array=[];
+}
 array.forEach((post)=>{
    post.createAt=new Date(post.createAt);
 });
