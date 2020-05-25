@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <title>Likeshowoff</title>
+    <link href="style.css" rel="stylesheet" type="text/css"/>
+</head>
+
+<body>
+<header id="header">
+    <div class="Logo">
+        Likeshowoff
+    </div>
+</header>
+<div class="registration_form",id="registration_form">
+
+</div>
+<form class="main_filtration" id="filtration">
+    <div class="filtration">
+        Filtration
+    </div>
+    <div class="input_login">
+        Login
+    </div>
+    <input class="inputLogin" id="filtration_login">
+    </input>
+    <div class="input_data">
+        Data
+    </div>
+    <input placeholder="dd" type="number" class="inputData1" id="input_day">
+    </input>
+    <input placeholder="mm" type="number" class="inputData2" id="input_month">
+    </input>
+    <input placeholder="yy" type="number" class="inputData3" id="input_year">
+    </input>
+    <div class="input_tag">
+        Tag
+    </div>
+    <div class="special_symbol">
+        #
+    </div>
+    <input  class="inputTag" id="input_tag_filtration">
+    </input>
+    <button type="button" class="buttonAdd" id="add_tag_filtration">
+        Add
+    </button>
+    <button type="button" class="filtration_remove_last_tag" id="filtration_remove_last_tag">remove last tag</button>
+    <div class="tags_list" id="tags_list"></div>
+    <button type="submit" class="filtration_btn" >Search</button>
+
+</form>
+<div class="zatemnenie1" id="registration">
+    <form class="authorization_form" id="authorization_form">
+        <div class="authorization">Registration</div>
+        <button id="btn_close" class="btn_close">&#10006;</button>
+        <div class="login">
+            Login
+        </div>
+        <input class="input_login_in_form" id="registration_login" name="registration" required >
+        <div class="password">
+            Password
+        </div>
+        <input type="password" class="input_password" id="registration_password" name="registration" required>
+        <div class="confirm" id="confirm_password">Confirm password</div>
+        <input type="password" id="input_confirm" class="input_confirm" name="registration" required>
+        <button id="register" type="submit" class="filtration_btn">Sign up</button>
+    </form>
+</div>
+<div class="zatemnenie2" id="log_in_form">
+    <form class="authorization_form" id="login_form">
+        <div class="authorization">Log in</div>
+        <button id="btn_close_log_in" class="btn_close">&#10006;</button>
+        <div class="login">
+            Login
+        </div>
+        <input class="input_login_in_form" id="input_login" required>
+        <div class="password">
+            Password
+        </div>
+        <input type="password" class="input_password"required>
+        <button id="log_in" type="submit" class="filtration_btn">Log in</button>
+    </form>
+</div>
+<div id='new_post_f'class="zatemnenie3">
+    <form class="new_post_form"id="new_post_form">
+        <button type="button" id="btn_close_new_post" class="btn_close">&#10006;</button>
+        <img class="new_post_photo" id="new_post_photo"></img>
+        <input type="file" accept="image" id="choose_photo" class="input_photo">
+        <label for="choose_photo" class="choose_photo">Choose photo</label>
+        <div class="new_post_hashtag">hashTag</div>
+        <div class="symbol_hashTag">#</div>
+        <input type="text" class="input_hashTag" id="new_post_input_hashtag">
+        <button type="button" class="new_post_btn_add_hashtag" id="new_post_add_hashtag">Add</button>
+        <button type="button" class="new_post_btn_remove_last_hashtag" id="new_post_remove_hashtag">remove last tag</button>
+        <div class="new_post_hashTagList " id="new_post_hashTagList"></div>
+        <div class="new_post_text">Text</div>
+        <input class="new_post_input_text" id="new_post_input_text"required></input>
+        <button type="submit" class="filtration_btn ">Create</button>
+    </form>
+</div>
+<div id='edit_post_form'class="zatemnenie4">
+    <form class="new_post_form",id="edit_post_form">
+        <button id="btn_close_edit_post" type="button" class="btn_close">&#10006;</button>
+        <img class="new_post_photo"></img>
+        <input type="file" id="edit_photo" class="input_photo">
+        <label for="choose_photo" class="choose_photo">Choose new photo</label>
+        <div class="new_post_hashtag">HashTag</div>
+        <div class="symbol_hashTag">#</div>
+        <input class="input_hashTag" id="edit_post_input_hashtag">
+        <button class="new_post_btn_add_hashtag" type="button" id="edit_post_add_hashtag">Add</button>
+        <button class="new_post_btn_remove_last_hashtag" id="edit_post_remove_last_hashtag" type="button">remove last tag</button>
+        <div class="new_post_hashTagList" id="edit_post_hashtag_list"></div>
+        <div class="new_post_text">Text</div>
+        <input type="text" class="new_post_input_text" id="edit_post_input_text" ></input>
+        <button type="submit" class="filtration_btn">Edit</button>
+    </form>
+</div>
+<div id="remove_post_form" class="zatemnenie5">
+    <form class="asking_form">
+        <button id="btn_close_asking_form" class="btn_close">&#10006;</button>
+        <div class="are_you_sure">Are you sure?</div>
+        <button class="btn_yes">Yes</button>
+        <button class="btn_no">No</button>
+    </form>
+</div>
+<div id="posts"class="posts"></div>
+<footer class="special_footer">
+    <br>likeshowoff</br>
+    <br>Turuto Aleksei</br>
+    <br>2 course 5 group</br>
+    <br>bissmmhunter@gmail.com</br>
+    <br>29.04.2020</br>
+</footer>
+</body>
+<script  src="script.js"></script>
+<script  src="PostCollection.js"></script>
+<script src="View.js"></script>
+<script src="Controller.js"></script>
+
+</html>
