@@ -24,4 +24,3 @@ public class Status extends HttpServlet {
         out.println("</html>");
     }
 }
-

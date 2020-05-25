@@ -1,0 +1,2 @@
+let editid;
+let likeid;

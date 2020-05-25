@@ -5,14 +5,20 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet(name = "Get")
-public class Get extends HttpServlet {
+@WebServlet(name = "GetPost")
+public class GetPost extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        response.getOutputStream().println("Name is " + request.getParameter("name"));
+        PostCollection posts=new PostCollection();
+        Post returnPost=posts.getPost(request.getParameter("id"));
+        if(returnPost.getId().equals("")){
+            response.getOutputStream().println("NOT FOUND");
+        }
+        else {
+            response.getOutputStream().println("Post: \n"+returnPost.toString());
+        }
     }
 }
-
